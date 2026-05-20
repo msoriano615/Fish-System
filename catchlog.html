@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Log a Catch</title>
+    </head>
+    <body>
+        <header>
+            <img src="images/a-fish-logo_10924291.png" width="100" height="100" alt="Fishing Logo">
+            <h1>Log a Catch</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="catchlog.html">Log a Catch</a>
+                <a href="records.html">Records</a> 
+                <a href="statistics.html">Statistics</a> 
+                <a href="profile.html">My profile</a>
+                <a href="logout.html">Logout</a>
+            </nav>
+        </header>
+        <main>
+            <form action="home.html" method="post">
+                <fieldset>
+                    <legend>Catch Information</legend>
+                    <label for="fish_type">Fish Name:</label>
+                    <select id="fish_type" name="fish_type" required>
+                        <option value="">Select a fish type</option>
+                        <option value="bass">Lake Whitefish</option>
+                        <option value="trout">Walleye</option>
+                        <option value="pike">Northern Pike</option>
+                        <option value="yellow perch">Yellow Perch</option>
+                        <option value="burbot">Burbot</option>
+                    </select><br><br>
+            
+                    <label for="weight">Weight (lbs):</label>
+                    <input type="number" id="weight" name="weight" placeholder="Enter weight" required step="0.1"><br><br>
+            
+                    <label for="length">Length (inches):</label>
+                    <input type="number" id="length" name="length" placeholder="Enter length" required step="0.1"><br><br>
+           
+                    <label for="bait">Bait Used:</label>
+                    <input type="radio" id="live_bait" name="bait" value="live bait" required>
+                    <label for="live_bait">Live Bait</label>
+                    <input type="radio" id="organic_bait" name="bait" value="organic/natural bait" required>
+                    <label for="organic_bait">Organic/Natural Bait</label>
+                    <input type="radio" id="artificial_lure" name="bait" value="artificial lure" required>
+                    <label for="artificial_lure">Artificial Lure</label><br><br>
+         
+                    <label for="bait">Bait Used:</label>
+                    <input type="text" id="bait" name="bait" placeholder="Enter bait used" required><br><br>
+            
+                    <label for="location">Location:</label>
+                    <select id="location" name="location" required>
+                        <option value="">Select a location</option>
+                        <option value="sylan_lake">Sylan Lake</option>
+                        <option value="gull_lake">Gull Lake</option>
+                        <option value="crystal_river">Pine Lake</option>
+                    </select><br><br>
+            
+                    <label for="date">Date Caught:</label>
+                    <input type="date" id="date" name="date" required>
+                    <label for="time">Time Caught:</label>
+                    <input type="time" id="time" name="time" required><br><br> 
+           
+                    <label for="weather">Weather Conditions:</label>
+                    <input type="checkbox" id="sunny" name="weather" value="sunny">
+                    <label for="sunny">Sunny</label>
+                    <input type="checkbox" id="cloudy" name="weather" value="cloudy">
+                    <label for="cloudy">Cloudy</label>
+                    <input type="checkbox" id="rainy" name="weather" value="rainy">
+                    <label for="rainy">Rainy</label><br><br>
+            
+                    <input type="submit" value="Save Catch">
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <hr>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="mailto:miguel.soriano@rdpolytech.ca">Contact Us</a></li>
+                </ul>
+                    <p>&copy; 2025 Fishing Logging System. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
