@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/styles.css">
-        <title>Statistics</title>
-    </head>
-    <body>
-        <header>
-            <img src="images/a-fish-logo_10924291.png" width="100" height="100" alt="Fishing Logo">
-            <h1>Fishing Statistics</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="catchlog.html">Log a Catch</a>
-                <a href="records.html">Records</a> 
-                <a href="statistics.html">Statistics</a> 
-                <a href="profile.html">My profile</a>
-                <a href="logout.html">Logout</a>
-            </nav>
-        </header>
-        <hr>
-        <main>
-            <h2>Fishing Statistics</h2>
-                <h3>Fish Species Distribution:</h3>
-                <ul>
-                    <li>Lake Whitefish: 40%</li>
-                    <li>Walleye: 30%</li>
-                    <li>Northern Pike: 20%</li>
-                    <li>Yellow Perch: 5%</li>
-                    <li>Burbot: 5%</li>
-                </ul><br>
-                <h3>Most Popular Locations:</h3>
-                <ul>
-                    <li>Sylan Lake: 40%</li>
-                    <li>Gull Lake: 30%</li>
-                    <li>Pine Lake: 20%</li>
-                </ul><br>
-                <h3>Best Bait Types:</h3>
-                <ul>
-                    <li>Live Bait: 50%</li>
-                    <li>Organic/Natural Bait: 30%</li>
-                    <li>Artificial Lure: 20%</li>
-           
-        </main>
-         <footer>
-        <hr>
-            <ul>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="mailto:miguel.soriano@rdpolytech.ca">Contact Us</a></li>
-            </ul>
-                <p>&copy; 2025 Fishing Logging System. All rights reserved.</p>
-        </footer>
-    </body>
-</html>    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statistics — CatchLog</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="records.html" class="brand">
+        <img src="images/a-fish-logo_10924291.png" alt="Fishing Logo" height="32">
+        Catch Log
+      </a>
+      <ul class="nav-links">
+        <li><a href="catchlog.html">Log a Catch</a></li>
+        <li><a href="records.html">Records</a></li>
+        <li><a href="statistics.html" class="active">Statistics</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="index.html" class="btn-logout">Log out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="stats-page">
+
+    <h2>Fishing Statistics</h2>
+    <p class="stats-sub">A summary of all local logged catches</p>
+
+    <hr>
+
+    <div class="stats-section">
+      <h3>Fish Species Distribution</h3>
+      <ul>
+        <li>Lake Whitefish: 40%</li>
+        <li>Walleye: 30%</li>
+        <li>Northern Pike: 20%</li>
+        <li>Yellow Perch: 5%</li>
+        <li>Burbot: 5%</li>
+      </ul>
+    </div>
+
+    <div class="stats-section">
+      <h3>Most Popular Locations</h3>
+      <ul>
+        <li>Sylvan Lake: 40%</li>
+        <li>Gull Lake: 30%</li>
+        <li>Pine Lake: 20%</li>
+      </ul>
+    </div>
+
+    <div class="stats-section">
+      <h3>Best Bait Types</h3>
+      <ul>
+        <li>Live Bait: 50%</li>
+        <li>Organic/Natural Bait: 30%</li>
+        <li>Artificial Lure: 20%</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="mailto:miguel.soriano@rdpolytech.ca">Contact Us</a></li>
+    </ul>
+    <p>&copy; 2025 Fishing Logging System. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
