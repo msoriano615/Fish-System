@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log a Catch — CatchLog</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="records.html" class="brand">
+        <img src="images/a-fish-logo_10924291.png" alt="Fishing Logo" height="32">
+        Catch Log
+      </a>
+      <ul class="nav-links">
+        <li><a href="catchlog.html" class="active">Log a Catch</a></li>
+        <li><a href="records.html">My Records</a></li>
+        <li><a href="statistics.html">Statistics</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="index.html" class="btn-logout logout-link">Log out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-page">
+    <div class="form-card">
+      <h2>Log a Catch</h2>
+      <p class="form-sub">Record your latest catch</p>
+
+      <p id="catchSuccess" style="display: none; color: #0f6e56; font-size: 13px; margin-bottom: 10px;">
+        Catch saved! Redirecting to your records...
+      </p>
+
+      <form id="catchForm" action="records.html" method="post">
+        <fieldset style="border: none; padding: 0;">
+          <legend style="display: none;">Catch Information</legend>
+
+          <label for="fish_type">Fish Name</label>
+          <select id="fish_type" name="fish_type" required>
+            <option value="">Select a fish type</option>
+            <option value="lake_whitefish">Lake Whitefish</option>
+            <option value="walleye">Walleye</option>
+            <option value="northern_pike">Northern Pike</option>
+            <option value="yellow_perch">Yellow Perch</option>
+            <option value="burbot">Burbot</option>
+          </select>
+
+          <label for="weight">Weight (lbs)</label>
+          <input type="number" id="weight" name="weight" placeholder="Enter weight" required step="0.1" min="0">
+
+          <label for="length">Length (inches)</label>
+          <input type="number" id="length" name="length" placeholder="Enter length" required step="0.1" min="0">
+
+          <label>Bait Type</label>
+          <div style="display: flex; gap: 20px; margin-bottom: 8px;">
+            <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+              <input type="radio" name="bait_type" value="live_bait" required> Live Bait
+            </label>
+            <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+              <input type="radio" name="bait_type" value="organic_bait"> Organic/Natural Bait
+            </label>
+            <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+              <input type="radio" name="bait_type" value="artificial_lure"> Artificial Lure
+            </label>
+          </div>
+
+          <label for="bait_name">Bait Name</label>
+          <input type="text" id="bait_name" name="bait_name" placeholder="Enter bait name" required>
+
+          <label for="location">Location</label>
+          <select id="location" name="location" required>
+            <option value="">Select a location</option>
+            <option value="sylvan_lake">Sylvan Lake</option>
+            <option value="gull_lake">Gull Lake</option>
+            <option value="pine_lake">Pine Lake</option>
+          </select>
+
+          <label for="date">Date Caught</label>
+          <input type="date" id="date" name="date" required>
+
+          <label for="time">Time Caught</label>
+          <input type="time" id="time" name="time" required>
+
+          <label>Weather Conditions</label>
+          <div style="display: flex; gap: 20px; margin-bottom: 8px;">
+            <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+              <input type="checkbox" name="weather" value="sunny"> Sunny
+            </label>
+            <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+              <input type="checkbox" name="weather" value="cloudy"> Cloudy
+            </label>
+            <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+              <input type="checkbox" name="weather" value="rainy"> Rainy
+            </label>
+          </div>
+
+          <input type="submit" value="Save Catch" class="btn-primary form-submit">
+
+        </fieldset>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="mailto:miguel.soriano@rdpolytech.ca">Contact Us</a></li>
+    </ul>
+    <p>&copy; 2026 Fishing Logging System. All rights reserved.</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

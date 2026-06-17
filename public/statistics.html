@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statistics — CatchLog</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="records.html" class="brand">
+        <img src="images/a-fish-logo_10924291.png" alt="Fishing Logo" height="32">
+        Catch Log
+      </a>
+      <ul class="nav-links">
+        <li><a href="catchlog.html">Log a Catch</a></li>
+        <li><a href="records.html">My Records</a></li>
+        <li><a href="statistics.html" class="active">Statistics</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="index.html" class="btn-logout logout-link">Log out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="stats-page">
+    <h2>Fishing Statistics</h2>
+    <p class="stats-sub">A summary of all local logged catches</p>
+
+    <hr>
+
+    <div class="stats-section">
+      <h3>Fish Species Distribution</h3>
+      <div class="chart-container">
+        <canvas id="speciesChart"></canvas>
+      </div>
+    </div>
+
+    <div class="stats-section">
+      <h3>Most Popular Locations</h3>
+      <div class="chart-container">
+        <canvas id="locationChart"></canvas>
+      </div>
+    </div>
+
+    <div class="stats-section">
+      <h3>Best Bait Types</h3>
+      <div class="chart-container">
+        <canvas id="baitChart"></canvas>
+      </div>
+    </div>
+
+    <div class="stats-section">
+      <h3>Best Time of Day for Fishing</h3>
+      <div class="chart-container">
+        <canvas id="timeChart"></canvas>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="mailto:miguel.soriano@rdpolytech.ca">Contact Us</a></li>
+    </ul>
+    <p>&copy; 2026 Fishing Logging System. All rights reserved.</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

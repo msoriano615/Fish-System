@@ -469,3 +469,80 @@ footer ul {
     gap: 20px;
     margin-bottom: 10px;
 }
+
+/* Chart container */
+.chart-container {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* Search bar */
+#searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+#searchInput:focus {
+    border-color: #0f6e56;
+    outline: none;
+}
+
+/* Action buttons in table */
+.btn-edit, .btn-delete {
+    padding: 4px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-edit:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-delete {
+    color: #c0392b;
+    border-color: #c0392b;
+}
+
+.btn-delete:hover {
+    background-color: #fbe9e7;
+}
+
+/* Edit modal form */
+#editForm label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+#editForm input,
+#editForm select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+#editForm input:focus,
+#editForm select:focus {
+    border-color: #0f6e56;
+    outline: none;
+}
+
+#editForm input[type="radio"],
+#editForm input[type="checkbox"] {
+    width: auto;
+}

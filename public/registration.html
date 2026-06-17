@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — CatchLog</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="landing-nav">
+    <a href="index.html" class="brand">
+      <img src="images/a-fish-logo_10924291.png" alt="Fishing Logo" height="32">
+      Catch Log
+    </a>
+  </nav>
+
+  <main class="form-page">
+    <div class="form-card">
+      <h2>Create an account</h2>
+      <p class="form-sub">Start logging your catches</p>
+
+      <form id="registrationForm" action="login.html" method="post">
+        <fieldset style="border: none; padding: 0;">
+          <legend style="display: none;">Account Information</legend>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+          <label for="win_number">WIN Number</label>
+          <input type="text" id="win_number" name="win_number" placeholder="Enter 10 Digit WIN number" maxlength="10" required>
+
+          <label for="phone">Phone Number <span style="color: #555; font-weight: normal;">(Optional)</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+          <label for="confirm_password">Confirm Password</label>
+          <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+
+          <p id="registrationError" style="display: none; color: red; font-size: 13px; margin-top: 8px;"></p>
+
+          <input type="submit" value="Create account" class="btn-primary form-submit">
+        </fieldset>
+      </form>
+
+      <p class="form-footer">
+        Already have an account? <a href="login.html">Log in</a>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="mailto:miguel.soriano@rdpolytech.ca">Contact Us</a></li>
+    </ul>
+    <p>&copy; 2026 Fishing Logging System. All rights reserved.</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

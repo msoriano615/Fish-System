@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Records — CatchLog</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="records.html" class="brand">
+        <img src="images/a-fish-logo_10924291.png" alt="Fishing Logo" height="32">
+        Catch Log
+      </a>
+      <ul class="nav-links">
+        <li><a href="catchlog.html">Log a Catch</a></li>
+        <li><a href="records.html" class="active">My Records</a></li>
+        <li><a href="statistics.html">Statistics</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="index.html" class="btn-logout logout-link">Log out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="records-page">
+    <h2>My Records</h2>
+    <p class="records-sub">A full log of all your catches</p>
+
+    <hr>
+
+    <div class="records-summary">
+      <div class="summary-card">
+        <label>Total Catches</label>
+        <p id="totalCatches">—</p>
+      </div>
+      <div class="summary-card">
+        <label>Heaviest Fish</label>
+        <p id="heaviestFish">—</p>
+      </div>
+      <div class="summary-card">
+        <label>Longest Fish</label>
+        <p id="longestFish">—</p>
+      </div>
+      <div class="summary-card">
+        <label>Average Weight</label>
+        <p id="avgWeight">—</p>
+      </div>
+      <div class="summary-card">
+        <label>Average Length</label>
+        <p id="avgLength">—</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <input type="text" id="searchInput" placeholder="Search by fish, location or bait...">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Fish Name</th>
+          <th>Weight (lbs)</th>
+          <th>Length (inches)</th>
+          <th>Bait Type</th>
+          <th>Bait Name</th>
+          <th>Location</th>
+          <th>Date Caught</th>
+          <th>Time Caught</th>
+          <th>Weather</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="recordsTable">
+        <tr>
+          <td colspan="10" style="text-align: center; color: #555;">
+            No catches logged yet.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="mailto:miguel.soriano@rdpolytech.ca">Contact Us</a></li>
+    </ul>
+    <p>&copy; 2026 Fishing Logging System. All rights reserved.</p>
+  </footer>
+
+  <!-- Edit Catch Modal -->
+  <div class="modal-overlay" id="editModal">
+    <div class="modal">
+      <h2>Edit Catch</h2>
+
+      <form id="editForm">
+        <input type="hidden" id="edit_id">
+
+        <label for="edit_fish_type">Fish Name</label>
+        <select id="edit_fish_type" required>
+          <option value="lake_whitefish">Lake Whitefish</option>
+          <option value="walleye">Walleye</option>
+          <option value="northern_pike">Northern Pike</option>
+          <option value="yellow_perch">Yellow Perch</option>
+          <option value="burbot">Burbot</option>
+        </select>
+
+        <label for="edit_weight">Weight (lbs)</label>
+        <input type="number" id="edit_weight" step="0.1" min="0" required>
+
+        <label for="edit_length">Length (inches)</label>
+        <input type="number" id="edit_length" step="0.1" min="0" required>
+
+        <label>Bait Type</label>
+        <div style="display: flex; gap: 20px; margin-bottom: 8px;">
+          <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+            <input type="radio" name="edit_bait_type" value="live_bait"> Live Bait
+          </label>
+          <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+            <input type="radio" name="edit_bait_type" value="organic_bait"> Organic/Natural
+          </label>
+          <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+            <input type="radio" name="edit_bait_type" value="artificial_lure"> Artificial Lure
+          </label>
+        </div>
+
+        <label for="edit_bait_name">Bait Name</label>
+        <input type="text" id="edit_bait_name" required>
+
+        <label for="edit_location">Location</label>
+        <select id="edit_location" required>
+          <option value="sylvan_lake">Sylvan Lake</option>
+          <option value="gull_lake">Gull Lake</option>
+          <option value="pine_lake">Pine Lake</option>
+        </select>
+
+        <label for="edit_date">Date Caught</label>
+        <input type="date" id="edit_date" required>
+
+        <label for="edit_time">Time Caught</label>
+        <input type="time" id="edit_time" required>
+
+        <label>Weather Conditions</label>
+        <div style="display: flex; gap: 20px; margin-bottom: 8px;">
+          <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+            <input type="checkbox" name="edit_weather" value="sunny"> Sunny
+          </label>
+          <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+            <input type="checkbox" name="edit_weather" value="cloudy"> Cloudy
+          </label>
+          <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+            <input type="checkbox" name="edit_weather" value="rainy"> Rainy
+          </label>
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+          <button type="submit" class="btn-primary form-submit">Save Changes</button>
+          <button type="button" class="btn-secondary form-submit" onclick="closeEditModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div class="modal-overlay" id="deleteModal">
+    <div class="modal">
+      <h2>Delete Catch</h2>
+      <p>Are you sure you want to delete this catch? This cannot be undone.</p>
+      <input type="hidden" id="delete_id">
+      <div style="display: flex; gap: 10px; margin-top: 15px;">
+        <button class="btn-primary form-submit" style="background-color: #c0392b;" onclick="confirmDelete()">Delete</button>
+        <button class="btn-secondary form-submit" onclick="closeDeleteModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatchLog</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="landing-nav">
+    <a href="index.html" class="brand">
+      <img src="images/a-fish-logo_10924291.png" alt="Fishing Logo" height="32">
+      Catch Log
+    </a>
+    <div class="nav-right">
+      <a href="login.html" class="btn-secondary">Log in</a>
+      <a href="registration.html" class="btn-primary">Register</a>
+    </div>
+  </nav>
+
+  <main class="landing-hero">
+    <h1>Track every catch.</h1>
+    <p>Log your fishing, view your records, and track your stats all in one place.</p>
+    <div class="hero-buttons">
+      <a href="registration.html" class="btn-primary">Get started</a>
+      <a href="login.html" class="btn-secondary">Log in</a>
+    </div>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="#" onclick="openModal()">Privacy Policy</a></li>
+      <li><a href="mailto:miguel.soriano@rdpolytech.ca">Contact Us</a></li>
+    </ul>
+    <p>&copy; 2026 Fishing Logging System. All rights reserved.</p>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div class="modal-overlay" id="privacyModal">
+    <div class="modal">
+      <h2>Privacy Policy</h2>
+      <p>We collect the following information when you use Catch Log:</p>
+      <ul>
+        <li>Your catch logs and fishing records</li>
+        <li>Your profile information</li>
+        <li>Your statistics and history</li>
+      </ul>
+      <p>This information is only used to provide the Catch Log service and is never shared with third parties.</p>
+      <button class="btn-close" onclick="closeModal()">Got it</button>
+    </div>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
